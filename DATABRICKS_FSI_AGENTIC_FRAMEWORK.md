@@ -30,9 +30,19 @@ Databricks presents a strategic framework showing the evolution path:
 
 ## The Two-Tier Framework: Run vs. Change
 
+### Strategic Philosophy: From Co-Pilot to Autonomous Agent
+
+The central distinction between "Run the Bank" and "Change the Bank" represents a fundamental paradigm shift from AI as a passive analytical co-pilot to AI as an autonomous, action-oriented agent.
+
+**"Run the Bank" (RTB)** uses AI for **decision support**. It optimizes existing operations by democratizing data and answering complex questions, making your current processes faster and more efficient.
+
+**"Change the Bank" (CTB)** uses AI for **autonomous execution**. It transforms your business by creating agents that can reason, plan, and execute entire multi-step workflows, enabling new business models and competitive moats.
+
 ### "RUN THE BANK" (Lower Complexity, Core Operations)
 
-These foundational capabilities focus on optimizing existing operations and democratizing data access.
+This is the foundational stage, focused on efficiency and modernization. It directly addresses the problem of 80% of firms having co-pilots with no returns by making those co-pilots genuinely useful for core operations.
+
+**Core Concept:** Data democratization and information retrieval.
 
 #### 1. Agentic BI Genie & Dashboards
 **Capability:** Natural language interface for data querying and insights generation
@@ -48,6 +58,9 @@ These foundational capabilities focus on optimizing existing operations and demo
 - Reduces dependency on data specialists
 - Accelerates decision-making processes
 - Improves data literacy organization-wide
+
+**Practical Example:**
+Instead of a business user filing a ticket for a SQL query, they can simply ask: *"What was our credit risk exposure in commercial real estate last quarter, broken down by region?"*
 
 **Use Cases:**
 - "Show me Q3 credit card transaction trends by geography"
@@ -69,6 +82,9 @@ These foundational capabilities focus on optimizing existing operations and demo
 - Consistent interpretation of policies and procedures
 - Enhanced compliance and regulatory adherence
 
+**Practical Example:**
+A compliance officer can ask: *"Summarize the key impacts of the latest regulatory change on our wealth management division,"* and receive a synthesized answer with citations.
+
 **Use Cases:**
 - "What are our current KYC requirements for corporate clients?"
 - "Show me the approval process for high-value transactions"
@@ -77,6 +93,10 @@ These foundational capabilities focus on optimizing existing operations and demo
 ---
 
 ### "CHANGE THE BANK" (Higher Complexity, Transformative Impact)
+
+This is the "Agentic Shift"—a move from assisting humans to augmenting the institution itself. These agents don't just answer questions; they complete tasks.
+
+**Core Concept:** Autonomous workflow execution and complex reasoning.
 
 These advanced capabilities enable fundamental business transformation and competitive differentiation.
 
@@ -94,6 +114,9 @@ These advanced capabilities enable fundamental business transformation and compe
 - Cross-system workflow optimization
 - Reduced manual intervention
 - Consistent execution quality
+
+**Practical Example:**
+An agent that can receive a request, reason that it needs to query a database (Tool 1), run a risk model (Tool 2), and then draft an email to a manager (Tool 3).
 
 **Use Cases:**
 - Automated loan origination workflows
@@ -115,6 +138,15 @@ These advanced capabilities enable fundamental business transformation and compe
 - Scalable specialized expertise
 - Adaptive workflow management
 - Innovation acceleration
+
+**Detailed Multi-Agent Example (Agentic Bank Loan Process):**
+The most advanced stage involves a "manager" agent that orchestrates specialized agents:
+
+1. **Customer Intent Agent:** Parses the loan request
+2. **Data Retrieval Agent:** Pulls financials (a tool-calling agent)
+3. **Risk & Underwriting Agent:** Runs risk models and calculations
+4. **Compliance Agent:** Checks the offer against regulations
+5. **Manager Agent:** Synthesizes all outputs into a single, complex, personalized offer
 
 **Use Cases:**
 - Comprehensive risk assessment combining multiple models
@@ -206,6 +238,39 @@ These advanced capabilities enable fundamental business transformation and compe
 - New revenue streams from AI-powered products
 - Competitive advantage measurement
 - Customer satisfaction improvements
+
+---
+
+## Practical Application Matrix: RTB vs. CTB by Use Case
+
+The following table demonstrates how the same financial services use cases can be addressed at different maturity levels, showing the evolution from "Run the Bank" decision support to "Change the Bank" autonomous execution.
+
+| **Use Case** | **"Run the Bank" (RTB) Application** | **"Change the Bank" (CTB) Application** |
+|--------------|--------------------------------------|------------------------------------------|
+| **Fraud Prevention** | **(BI Genie)** "Show me a dashboard of real-time transaction anomalies and compare them to last quarter's fraud patterns." | **(Multi-Agent System)** "Detect this anomaly, investigate the user's history, freeze the account, call the customer's API for verification, and file a SAR... all in under 500ms." |
+| **Risk Management (Credit Risk)** | **(Knowledge Base)** "What is our underwriting policy for a mid-market loan in the tech sector?" | **(Tool-Calling Agent)** "Continuously monitor our entire loan portfolio. If a market event (e.g., interest rate hike) triggers a risk breach, autonomously re-calculate the VaR and alert the risk officer." |
+| **Investment Analytics** | **(BI Genie)** "Summarize analyst sentiment and recent news for all stocks in my portfolio." | **(Multi-Agent System)** "Scan all market data, news, and filings. Identify three potential alpha-generating trade ideas, run them against my portfolio's risk model, and present a full thesis for each." |
+| **Back-Middle Office** | **(BI Genie)** "What is the settlement status of trade XYZ, and why is it delayed?" | **(Multi-Agent System)** "Autonomously process, reconcile, and settle all T+1 trades. Identify and resolve exceptions by interfacing with custodian and counterparty systems. Only flag items for human review." |
+| **Claims & Fraud (Insurance)** | **(Knowledge Base)** "Pull the claim history and policy details for customer John Doe." | **(Multi-Agent System)** "Receive a first notice of loss (FNOL) image, analyze the damage, check for fraud signals, approve the claim, and initiate the payment... all before the customer is off the phone." |
+
+### Key Insights from the Application Matrix
+
+**Business Impact Differentiation:**
+
+- **RTB Applications** focus on **efficiency gains**: Faster access to information, better decision support, reduced manual work
+- **CTB Applications** deliver **transformational outcomes**: Process automation, new revenue streams, competitive differentiation
+
+**Technical Complexity Evolution:**
+
+- **RTB** leverages existing data and systems for enhanced querying and analysis
+- **CTB** requires sophisticated orchestration, real-time integration, and autonomous decision-making capabilities
+
+**Implementation Strategy:**
+
+The strategic roadmap naturally flows from RTB to CTB:
+1. **Govern & Unify Data** → Enables RTB capabilities
+2. **AI + AI Dashboards (Achieve RTB)** → Democratizes unified data and builds AI trust
+3. **Deploy Agents (Enable CTB)** → Leverages trusted foundation for autonomous operations
 
 ---
 
@@ -433,6 +498,38 @@ These advanced capabilities enable fundamental business transformation and compe
 - New revenue stream generation
 - Competitive advantage demonstration
 - ROI realization and measurement
+
+---
+
+## The Strategic Roadmap: From RTB to CTB Excellence
+
+### Critical Path Dependencies
+
+The Databricks 3-step transformation plan creates the essential foundation for moving from "Run the Bank" to "Change the Bank" capabilities:
+
+#### Foundation Layer: Govern & Unify Data
+**Why This Enables RTB:** You cannot have effective "Run the Bank" capabilities if agents are operating on siloed, low-quality, or ungoverned data. This step creates the unified data foundation required for reliable BI Genie and Knowledge Base agents.
+
+**CTB Dependency:** "Change the Bank" agents require even higher data quality standards since they make autonomous decisions rather than just providing recommendations.
+
+#### Capability Layer: AI + AI Dashboards (Achieve RTB)
+**Building Trust:** By implementing the "BI Genie" and knowledge base capabilities, organizations democratize unified data, solve real business problems, and crucially build institutional trust in AI systems.
+
+**Cultural Transformation:** This phase transforms organizational culture from data skepticism to data confidence, essential for accepting autonomous agent decisions.
+
+#### Transformation Layer: Deploy Agents (Enable CTB)
+**Leveraging Foundation:** With trusted data foundation and proven AI capabilities, organizations can now empower agents to take action (tool-calling) and orchestrate complex workflows (multi-agent systems).
+
+**Competitive Advantage:** This phase truly "Changes the Bank" by creating autonomous processes that competitors cannot easily replicate.
+
+### Success Metrics Evolution
+
+| **Phase** | **RTB Metrics** | **CTB Metrics** |
+|-----------|----------------|----------------|
+| **Efficiency** | Time-to-insight reduction (70%+) | Process automation increase (40%+) |
+| **Quality** | Data accuracy improvements | Decision accuracy in autonomous processes |
+| **Impact** | User adoption and satisfaction | New revenue streams and market differentiation |
+| **Scale** | Query volume increases | Workflow automation coverage |
 
 ---
 
