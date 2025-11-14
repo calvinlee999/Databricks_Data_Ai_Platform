@@ -591,6 +591,539 @@ The following demonstrates how the 5-step process executes within this multi-age
 
 This multi-agent system, built on Databricks' governed data foundation (Unity Catalog) and using auditable tools (UC Functions, MLflow Models), represents the practical implementation of the "Agentic Institution" strategy—moving from co-pilot assistance to autonomous execution that fundamentally changes how banks operate.
 
+---
+
+## Databricks Agent Bricks: Production-Grade Agent Development
+
+### Overview: Auto-Optimized Agents Using Your Data
+
+**Databricks Agent Bricks** represents a paradigm shift in enterprise AI agent development, moving from complex manual optimization to automatic, research-backed agent creation. Agent Bricks addresses the key challenges that have prevented 95% of organizations from seeing returns on their AI investments.
+
+**Key Innovation:** Instead of managing overwhelming complexity, teams focus on defining their agent's purpose and providing strategic guidance through natural language feedback. Agent Bricks handles evaluation, optimization, and cost management automatically.
+
+### Core Capabilities
+
+#### 1. **Auto-Optimization Engine**
+
+- **Intelligent Search:** Automatically combines prompt engineering, model fine-tuning, reward models, and Test-Adaptive Optimization (TAO)
+- **Quality vs. Cost Balance:** Provides both cost-optimized and quality-optimized model configurations
+- **Continuous Improvement:** Agents improve over time through Agent Learning from Human Feedback (ALHF)
+
+#### 2. **Automatic Evaluation Framework**
+
+- **Domain-Specific Benchmarks:** Generates custom evaluation suites tailored to your specific use case
+- **Synthetic Data Generation:** Creates evaluation datasets using your enterprise data without manual labeling
+- **Custom LLM Judges:** Builds task-aware evaluation metrics and AI-assisted grading systems
+
+#### 3. **Enterprise Integration**
+
+- **Data Grounding:** Uses Unity Catalog-governed enterprise data for agent training and evaluation
+- **Production-Ready:** Trusted by Flo Health, AstraZeneca, Hawaiian Electric, and Experian
+- **Scalable Architecture:** Supports structured information extraction, knowledge assistance, text transformation, and multi-agent systems
+
+### Agent Bricks Development Workflow
+
+```mermaid
+graph TB
+    A[Define Task in Natural Language] --> B[Connect Data Sources]
+    B --> C[Automatic Evaluation Suite Creation]
+    C --> D[Synthetic Data Generation]
+    D --> E[Auto-Optimization Process]
+    E --> F[Quality Assessment]
+    F --> G{Performance Satisfactory?}
+    G -->|No| H[Natural Language Feedback]
+    H --> I[ALHF Optimization]
+    I --> E
+    G -->|Yes| J[Production Deployment]
+    J --> K[Continuous Learning]
+    K --> E
+    
+    style A fill:#e1f5fe
+    style J fill:#c8e6c9
+    style E fill:#fff3e0
+```
+
+### Agent Learning from Human Feedback (ALHF)
+
+**Problem Solved:** Traditional approaches pack all instructions into massive LLM prompts, which are brittle and don't scale to complex agent systems.
+
+**ALHF Innovation:**
+
+1. **Rich Context Processing:** Accepts natural language guidance (e.g., "ignore all data before May 1990")
+2. **Intelligent Translation:** Automatically converts feedback into technical optimizations:
+   - Refining retrieval algorithms
+   - Enhancing prompts
+   - Filtering vector databases
+   - Modifying agentic patterns
+
+**Democratization Impact:** Domain experts contribute directly to system improvement without deep technical AI expertise.
+
+---
+
+## Reference Architecture: Agent Bricks for Financial Services
+
+### High-Level Architecture Diagram
+
+```mermaid
+graph TB
+    subgraph "Agent Bricks Platform"
+        AB[Agent Bricks Controller]
+        OE[Optimization Engine]
+        EF[Evaluation Framework]
+        ALHF[Agent Learning from Human Feedback]
+    end
+    
+    subgraph "Databricks Data Intelligence Platform"
+        UC[Unity Catalog]
+        DL[Delta Lake]
+        MLF[MLflow]
+        VS[Vector Search]
+        MS[Model Serving]
+    end
+    
+    subgraph "Financial Services Agents"
+        LA[Loan Agent]
+        FA[Fraud Agent]
+        CA[Compliance Agent]
+        RA[Risk Agent]
+    end
+    
+    subgraph "Data Sources"
+        CD[Customer Data]
+        TD[Transaction Data]
+        RD[Regulatory Data]
+        MD[Market Data]
+    end
+    
+    AB --> LA
+    AB --> FA
+    AB --> CA
+    AB --> RA
+    
+    OE --> MLF
+    EF --> VS
+    ALHF --> UC
+    
+    LA --> UC
+    FA --> DL
+    CA --> VS
+    RA --> MS
+    
+    UC --> CD
+    DL --> TD
+    VS --> RD
+    MS --> MD
+    
+    style AB fill:#1976d2,color:#fff
+    style UC fill:#4caf50,color:#fff
+    style LA fill:#ff9800,color:#fff
+```
+
+### Component Architecture Details
+
+#### **Agent Bricks Controller**
+
+- **Purpose:** Central orchestration and management of all financial service agents
+- **Capabilities:**
+  - Task decomposition and agent routing
+  - Performance monitoring and optimization
+  - Cost management and resource allocation
+  - Integration with Databricks platform services
+
+#### **Optimization Engine**
+
+- **Research-Backed Methods:**
+  - Prompt engineering optimization
+  - Model fine-tuning with TAO (Test-Adaptive Optimization)
+  - Reward model integration
+  - Multi-objective optimization (quality vs. cost)
+- **Continuous Learning:**
+  - Performance tracking across all agents
+  - Automated A/B testing for optimization strategies
+  - Feedback loop integration with ALHF
+
+#### **Evaluation Framework**
+
+- **Synthetic Data Generation:** Creates domain-specific datasets for financial services
+- **Custom Judges:** LLM-based evaluation tailored to regulatory and compliance requirements
+- **Benchmark Creation:** Automatically generates evaluation suites for loan processing, fraud detection, etc.
+
+---
+
+## Sequence Diagrams: Agent Bricks in Action
+
+### 1. Loan Origination Agent Development Sequence
+
+```mermaid
+sequenceDiagram
+    participant User as Domain Expert
+    participant AB as Agent Bricks
+    participant OE as Optimization Engine
+    participant EF as Evaluation Framework
+    participant UC as Unity Catalog
+    participant Agent as Loan Agent
+    
+    User->>AB: Define: "Create loan origination agent for SMB customers"
+    AB->>UC: Connect to customer, credit, and regulatory data
+    AB->>EF: Generate loan-specific evaluation suite
+    EF->>EF: Create synthetic loan applications and scenarios
+    AB->>OE: Initialize optimization process
+    
+    loop Optimization Cycle
+        OE->>Agent: Test configuration (prompts, models, parameters)
+        Agent->>UC: Process test loan applications
+        Agent->>EF: Return results for evaluation
+        EF->>OE: Provide performance scores
+        OE->>OE: Adjust configuration based on scores
+    end
+    
+    AB->>User: Present optimized agent performance metrics
+    User->>AB: Provide feedback: "Focus more on regulatory compliance"
+    AB->>OE: Apply ALHF to incorporate compliance focus
+    OE->>Agent: Deploy enhanced configuration
+    Agent-->>User: Production-ready loan origination agent
+    
+    note over User,Agent: Development time: Hours vs. Months
+```
+
+### 2. Multi-Agent System Optimization Sequence
+
+```mermaid
+sequenceDiagram
+    participant AB as Agent Bricks
+    participant LA as Loan Agent
+    participant CA as Compliance Agent
+    participant RA as Risk Agent
+    participant DA as Data Agent
+    participant Customer
+    
+    Customer->>LA: "What loan options do I have for equipment purchase?"
+    LA->>AB: Request optimization coordination
+    AB->>DA: Gather customer financial profile
+    AB->>RA: Assess credit risk in parallel
+    AB->>CA: Check regulatory requirements in parallel
+    
+    par Parallel Processing
+        DA->>DA: Execute get_customer_financials()
+        RA->>RA: Execute run_credit_risk_model()
+        CA->>CA: Execute check_regulatory_rules()
+    end
+    
+    DA-->>AB: Customer financial data
+    RA-->>AB: Risk assessment results
+    CA-->>AB: Compliance validation results
+    
+    AB->>AB: Apply ALHF optimizations based on historical feedback
+    AB->>LA: Provide optimized data synthesis
+    LA->>LA: Generate personalized loan recommendations
+    LA-->>Customer: "Equipment loan: $75K at 6.9%, with tax benefits"
+    
+    AB->>AB: Log interaction for continuous learning
+    
+    note over AB,Customer: Response time: <500ms
+```
+
+### 3. Agent Performance Monitoring & Feedback Loop
+
+```mermaid
+sequenceDiagram
+    participant Ops as Operations Team
+    participant AB as Agent Bricks
+    participant PM as Performance Monitor
+    participant EF as Evaluation Framework
+    participant Agent as Financial Agent
+    
+    loop Continuous Monitoring
+        Agent->>PM: Process customer interactions
+        PM->>PM: Collect performance metrics
+        PM->>EF: Run evaluation benchmarks
+        EF->>AB: Report performance scores
+        
+        alt Performance Below Threshold
+            AB->>Ops: Alert: Agent performance degradation
+            Ops->>AB: Provide natural language feedback
+            AB->>AB: Apply ALHF optimization
+            AB->>Agent: Deploy improved configuration
+        else Performance Optimal
+            AB->>AB: Log successful patterns
+        end
+    end
+    
+    note over Ops,Agent: Proactive optimization prevents production issues
+```
+
+---
+
+## Implementation Best Practices for Financial Services
+
+### 1. **Data Governance and Security**
+
+#### Unity Catalog Integration
+
+```python
+# Example: Secure data access for Agent Bricks
+@uc_function(catalog="financial_services", schema="agents")
+def get_customer_credit_profile(customer_id: str, agent_id: str) -> dict:
+    """
+    Secure function for credit profile retrieval with audit logging
+    """
+    # Validate agent permissions
+    if not validate_agent_access(agent_id, "credit_profile"):
+        raise PermissionError("Agent not authorized for credit data")
+    
+    # Query with automatic audit logging
+    profile = spark.sql(f"""
+        SELECT credit_score, payment_history, debt_ratio, income
+        FROM credit_profiles 
+        WHERE customer_id = '{customer_id}'
+    """).collect()[0].asDict()
+    
+    # Log access for compliance
+    log_data_access(agent_id, customer_id, "credit_profile", profile.keys())
+    
+    return profile
+```
+
+#### Best Practices
+
+- **Principle of Least Privilege:** Each agent only accesses data necessary for its function
+- **Audit Logging:** All data access automatically logged for regulatory compliance
+- **Data Masking:** Sensitive data automatically masked based on agent clearance level
+- **Version Control:** All agent configurations versioned and traceable
+
+### 2. **Regulatory Compliance Framework**
+
+#### Automated Compliance Validation
+
+```python
+# Example: Compliance-aware agent configuration
+class ComplianceAwareAgent:
+    def __init__(self, agent_config):
+        self.config = agent_config
+        self.compliance_rules = load_regulatory_framework()
+    
+    def process_request(self, customer_request):
+        # Pre-processing compliance check
+        compliance_status = self.validate_request_compliance(customer_request)
+        if not compliance_status.is_compliant:
+            return self.generate_compliant_alternative(customer_request)
+        
+        # Process with compliance monitoring
+        result = self.execute_agent_logic(customer_request)
+        
+        # Post-processing compliance validation
+        final_result = self.ensure_response_compliance(result)
+        
+        # Log for audit trail
+        self.log_compliance_decision(customer_request, final_result)
+        
+        return final_result
+```
+
+#### Key Compliance Features
+
+- **Real-time Validation:** Every agent action validated against current regulations
+- **Explainable Decisions:** All agent decisions include compliance reasoning
+- **Regulatory Updates:** Automatic incorporation of new regulatory requirements
+- **Audit Trail:** Complete traceability of all compliance-related decisions
+
+### 3. **Performance Optimization Strategies**
+
+#### Cost-Quality Optimization Matrix
+
+| **Use Case** | **Quality Focus** | **Cost Focus** | **Recommended Configuration** |
+|-------------|------------------|----------------|----------------------------|
+| **Loan Underwriting** | High (Regulatory) | Medium | Quality-optimized with compliance validation |
+| **Customer Service** | Medium | High | Cost-optimized with quality thresholds |
+| **Fraud Detection** | High (Risk) | Low | Quality-optimized with real-time processing |
+| **Compliance Monitoring** | Very High | Medium | Quality-optimized with audit logging |
+
+#### Agent-Specific Optimization
+
+```python
+# Example: Dynamic optimization configuration
+optimization_config = {
+    "loan_agent": {
+        "priority": "quality",
+        "evaluation_metrics": ["accuracy", "compliance", "completeness"],
+        "cost_threshold": "medium",
+        "latency_requirement": "< 2 seconds"
+    },
+    "fraud_agent": {
+        "priority": "quality_and_speed", 
+        "evaluation_metrics": ["precision", "recall", "false_positive_rate"],
+        "cost_threshold": "low",
+        "latency_requirement": "< 100ms"
+    }
+}
+```
+
+### 4. **Integration Architecture Patterns**
+
+#### Event-Driven Agent Architecture
+
+```mermaid
+graph LR
+    subgraph "Event Sources"
+        T[Transactions]
+        A[Applications] 
+        M[Market Events]
+        R[Regulatory Changes]
+    end
+    
+    subgraph "Agent Bricks Event Hub"
+        EH[Event Hub]
+        ER[Event Router]
+    end
+    
+    subgraph "Specialized Agents"
+        FA[Fraud Agent]
+        LA[Loan Agent]
+        RA[Risk Agent]
+        CA[Compliance Agent]
+    end
+    
+    T --> EH
+    A --> EH
+    M --> EH
+    R --> EH
+    
+    EH --> ER
+    ER --> FA
+    ER --> LA
+    ER --> RA
+    ER --> CA
+    
+    style EH fill:#2196f3,color:#fff
+    style ER fill:#ff9800,color:#fff
+```
+
+#### Best Practices for Integration
+
+- **Asynchronous Processing:** Non-blocking agent interactions for high throughput
+- **Circuit Breakers:** Fault tolerance for external service dependencies
+- **Load Balancing:** Dynamic routing based on agent performance and availability
+- **Caching Strategies:** Intelligent caching of frequently accessed data and results
+
+### 5. **Monitoring and Observability**
+
+#### Agent Performance Dashboard
+
+```python
+# Example: Real-time agent monitoring
+class AgentMonitoring:
+    def __init__(self):
+        self.metrics_collector = MetricsCollector()
+        self.alerting = AlertingSystem()
+    
+    def monitor_agent_performance(self, agent_id):
+        metrics = {
+            "response_time": self.get_avg_response_time(agent_id),
+            "accuracy": self.get_accuracy_score(agent_id),
+            "cost_per_interaction": self.get_cost_metrics(agent_id),
+            "compliance_score": self.get_compliance_metrics(agent_id)
+        }
+        
+        # Check against thresholds
+        if metrics["response_time"] > self.thresholds["max_response_time"]:
+            self.alerting.send_alert("High latency detected", agent_id)
+        
+        if metrics["accuracy"] < self.thresholds["min_accuracy"]:
+            self.trigger_reoptimization(agent_id)
+        
+        return metrics
+```
+
+#### Key Monitoring Metrics
+
+- **Quality Metrics:** Accuracy, precision, recall, compliance scores
+- **Performance Metrics:** Response time, throughput, availability
+- **Cost Metrics:** Cost per interaction, resource utilization
+- **Business Metrics:** Customer satisfaction, conversion rates, error rates
+
+---
+
+## Production Success Stories with Agent Bricks
+
+### Case Study 1: AstraZeneca Clinical Document Processing
+
+**Challenge:** Parse 400,000+ clinical trial documents for structured data extraction  
+**Solution:** Agent Bricks information extraction agent  
+**Results:**
+
+- **Development Time:** Under 60 minutes (vs. months traditionally)
+- **Code Required:** Zero lines of custom code
+- **Accuracy:** Production-grade extraction of complex unstructured data
+- **Impact:** Transformed months of manual work into automated process
+
+### Case Study 2: Flo Health Medical Accuracy
+
+**Challenge:** Build medical AI agents meeting clinical accuracy standards  
+**Solution:** Agent Bricks with domain-specific optimization for healthcare  
+**Results:**
+
+- **Accuracy Improvement:** 2x better than standard commercial LLMs
+- **Compliance:** Met Flo Health's clinical accuracy, safety, and privacy standards
+- **Speed:** Days to production instead of weeks
+
+### Case Study 3: Hawaiian Electric Enterprise Implementation
+
+**Challenge:** Improve accuracy over existing open-source agent implementation  
+**Solution:** Agent Bricks automatic evaluation and optimization  
+**Results:**
+
+- **Evaluation Metrics:** Significantly outperformed original implementation
+- **Assessment:** Superior performance in both LLM-as-judge and human evaluation
+- **Production Quality:** Achieved enterprise-grade reliability
+
+---
+
+## Getting Started with Agent Bricks for Financial Services
+
+### Phase 1: Foundation Setup (Week 1)
+
+1. **Unity Catalog Configuration:** Set up data governance for financial data
+2. **Agent Bricks Access:** Enable Agent Bricks in Databricks workspace
+3. **Initial Data Connection:** Connect core banking systems to Databricks
+4. **Compliance Framework:** Configure regulatory validation rules
+
+### Phase 2: Pilot Implementation (Weeks 2-3)
+
+1. **Single Use Case:** Start with customer service knowledge agent
+2. **Evaluation Setup:** Let Agent Bricks generate domain-specific benchmarks
+3. **Optimization:** Apply automatic optimization with feedback
+4. **Testing:** Validate performance against existing systems
+
+### Phase 3: Production Deployment (Weeks 4-6)
+
+1. **Multi-Agent System:** Implement loan origination multi-agent workflow
+2. **Integration:** Connect agents to existing banking applications
+3. **Monitoring:** Set up performance dashboards and alerting
+4. **Scaling:** Expand to additional use cases based on success
+
+### Phase 4: Advanced Optimization (Ongoing)
+
+1. **ALHF Implementation:** Provide continuous natural language feedback
+2. **Performance Tuning:** Optimize cost-quality balance for each use case
+3. **Compliance Evolution:** Adapt to new regulatory requirements
+4. **Innovation:** Explore advanced multi-agent orchestration patterns
+
+---
+
+## Conclusion: The Agent Bricks Advantage
+
+Agent Bricks fundamentally transforms financial services AI development by:
+
+1. **Eliminating Complexity:** Auto-optimization removes the need for manual tuning
+2. **Ensuring Quality:** Research-backed methods deliver production-grade accuracy
+3. **Managing Costs:** Intelligent cost-quality optimization prevents budget overruns
+4. **Accelerating Deployment:** Days to production instead of months
+5. **Enabling Innovation:** Focus on business outcomes instead of technical complexity
+
+**The Future is Agentic:** With Agent Bricks, financial institutions can move beyond the 95% failure rate of traditional AI implementations to achieve the transformative "Change the Bank" vision through automated, optimized, and continuously improving AI agent systems.
+
+---
+
 ### Case Study 2: RBC (Royal Bank of Canada) Success Metrics
 
 **Quantified Results:**
